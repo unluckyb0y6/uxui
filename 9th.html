@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>MoneyPower</title>
+        <style>
+        body {
+            font-family: sans-serif;
+            text-align:center;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            width: 300px;
+            margin: 20px auto;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        </style>
+        <script src = "https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <h2>MoneyPower!</h2>
+        <hr>
+        <!-- 기준 통화 -->
+         <select id = "base" onchange = "getRates()">
+            <option value = "USD">USD</option>
+            <option value = "KRW">KRW</option>
+            <option value = "JPY">JPY</option>
+            <option value = "EUR">EUR</option>
+         </select>
+
+         <br><br>
+         <!-- money rate against put money -->
+         <input type = "number" id = "amount" value = "1" min = "0" oninput = "getRates()">
+
+         <div class = "container">
+            <canvas id = "chart" width = "400" height = "200"></canvas>
+            <!-- 환율 표시 -->
+             <div id = "grid">
+                <div class = "card" id = "KRW" onclick = "loadChart('KRW')">KRW</div>
+                <div class = "card" id = "JPY" onclick = "loadChart('JPY')">JPY</div>
+                <div class = "card" id = "EUR" onclick = "loadChart('EUR')">EUR</div>
+                <div class = "card" id = "CNY" onclick = "loadChart('CNY')">CNY</div>
+             </div>
+         </div>
+
+         <script src = "9th.js"></script>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset = "UTF-8">
+    <title>3주차 과제</title>
+    <style>
+        .t1 {
+            color: red;
+            text-shadow: 2px 2px black;
+        }
+        .list {
+            list-style-type: lower-roman;
+        }
+        .t2 {
+            color: black;
+            text-shadow: 7px -7px 20px green;
+        }
+        .list2
+        {
+            list-style-type: disc;
+        }
+        table, th, td {
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+    </style>
+    </head>
+    <body>
+        <h1 class = "t1">3차시 과제</h1>
+        <ol class = "list">
+            <li><a href = "https://www.google.com" target = "blank">google.com 방문</a></li>
+            <p>target 속성이 "_blank"이므로, 링크는 새로운 탭에서 열립니다.</p>
+            <li><a href = "https://www.google.com" target = "self">google.com 방문</a></li>
+            <p>target 속성이 "_self"이므로, 링크는 해당 창에서 열립니다.</p>
+        </ol>
+        <hr>
+        <table border = "1">
+        <thead>
+            <tr>
+                <th>mon</th>
+                <th>tue</th>
+                <th>wed</th>
+                <th>thu</th>
+                <th>fri</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>C programming</td>
+                <td>Web programming</td>
+                <td>Mobile programming</td>
+                <td>Java programming</td>
+                <td rowspan="3" style = "text-align: center;">휴강</td>
+            </tr>
+            <tr>
+                <td colspan="4" style = "text-align: center;">점심시간</td>
+            </tr>   
+            <tr>
+                <td>C programming</td>
+                <td>Web programming</td>
+                <td>Mobile programming</td>
+                <td>Java programming</td>
+            </tr>
+         </tbody>
+        </table>
+        <hr>
+        <h1 class = "t2">회원 가입을 환영합니다</h1>
+        <form>
+    <fieldset>
+        <legend>사용자 정보</legend>
+
+        <label>아이디</label>
+        <input type="text" placeholder="4자~10자, 공백없이"><br><br>
+
+        <label>이메일</label>
+        <input type="email"><br><br>
+
+        <label>비밀번호</label>
+        <input type="password" placeholder="문자와 숫자, 특수기호 포함"><br><br>
+
+        <label>비밀번호 확인</label>
+        <input type="password"><br><br>
+
+        <label>가입 경로</label>
+        <select>
+            <option>블로그</option>
+            <option>유튜브</option>
+            <option>지인 추천</option>
+        </select><br><br>
+
+        <label>메모</label><br>
+        <textarea rows="4" cols="40"></textarea>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>이벤트 및 새로운 소식</legend>
+
+        <input type="radio" name="mail"> 메일 수신
+        <input type="radio" name="mail"> 메일 수신 안 함
+    </fieldset>
+
+    <br>
+
+    <input type="submit" value="가입하기">
+    <input type="reset" value="취소">
+</form>
+    </body>
+</html>
